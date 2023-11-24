@@ -3,29 +3,53 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Inter, 'sans-serif';
-  font-size: 14px; }
+  font-size: 14px;
+  background-color: #0F172A;
+  max-width: 100vw; }
+
+body {
+  display: flex;
+  padding: 0 35px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  min-height: 100vh; }
+
+.wrapper {
+  max-width: 1150px;
+  width: 100%;
+  position: relative; }
 
 .carousel {
-  display: flex; 
-
-  &__arrow {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  scroll-behavior: smooth;
+  scrollbar-width: none; }
+  .carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto; }
+  .carousel.dragging img {
+    pointer-events: none; }
+  .carousel__arrow {
     position: absolute;
-    top: 500px;
-    left: 50px;
+    bottom: -10vh;
+    left: 53%;
     color: #64748B;
     background-color: #0B1324;
     border: 2px solid #64748B;
     padding: 15px;
     border-radius: 50%; }
-
-
-  &__arrow:hover {
+    .carousel__arrow--right {
+      left: 47%;
+      background-color: #0B1324; }
+  .carousel__arrow:hover {
     color: #0B1324;
     background-color: #754FFE; }
-
-  &__box {
-    width: 350px;
-    height: auto;
+  .carousel__box {
     background-color: #1E293B;
     display: flex;
     flex-direction: column;
@@ -34,27 +58,24 @@
     color: #64748B;
     padding: 40px;
     border-radius: 1rem;
-    margin-right: 10px; }
-
-  &__image {
+    object-fit: cover;
+    user-select: none; }
+  .carousel__image {
     border-radius: 50%;
     width: 56px; }
-
-  &__text {
+  .carousel__text {
     margin-top: 16px;
     line-height: 22.5px;
-    font-size: 14px; }
-
-  &__rating {
+    font-size: 14px;
+    background-color: #1E293B;
+    text-wrap: wrap; }
+  .carousel__rating {
     margin: 24px 0 16px 0;
-    color: #F59E0B; }
-
-  &__name {
+    color: #F59E0B;
+    background-color: #1E293B; }
+  .carousel__name {
     color: #fff;
-    font-size: 16px; }
-  }
-
-.fa-chevron-right {
-  left: 100px; }
+    font-size: 16px;
+    background-color: #1E293B; }
 
 /*# sourceMappingURL=carousel.css.map */
