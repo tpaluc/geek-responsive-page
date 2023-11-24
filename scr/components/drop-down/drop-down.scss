@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
     font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    font-family: 'inter', sans-serif;
    }
 
 :root {
@@ -35,8 +38,6 @@ a {
       width: calc($headingWidth * $nrOfLinks);
       display: flex;
       list-style: none;
-      margin: 0;
-      padding: 0;
 
      }
      
@@ -62,19 +63,23 @@ a {
 
      &__dropdown {
       list-style: none;
-      position: absolute;
       display: flex;
+      position: absolute;
       flex-direction: column;
       overflow: hidden;
       width: fit-content;
       background-color: var(--background-color-01);
-      height: 0;
-      transition: height 0.02s ease-in-out;
+      border-radius: 0.3rem;
+      opacity: 0;
+      visibility: hidden;
+      z-index: -100;
+      transform-origin: bottom;
+      transform: translateY(20px);
+      transition: all 0.3s ease-in-out;
+      box-shadow:  0 10px 30px 0 rgba(31,45,61,.1);
      }
 
      &__dropdownLink {
-      padding: 0;
-      margin: 0;
       display: flex;
       align-items: center;
       height: fit-content;
@@ -94,10 +99,10 @@ a {
      }
 
      &__dropdown-show {
-      padding: 0;
-      margin: 0;
+      visibility: visible;
+      z-index: 100;
+      opacity: 1;
+      transform: translateY(0);
       height: calc($hightOfCategoryLink * $nrOfCategoryLinks);
-      box-shadow:  0 10px 30px 0 rgba(31,45,61,.1);
-      border-radius: 0.3rem;
      }
 }

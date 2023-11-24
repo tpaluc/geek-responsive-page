@@ -2,20 +2,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const link = Array.from(document.querySelectorAll('.container__link'));
   const dropdown = Array.from(document.querySelectorAll('.container__dropdown'));
+  const dropdownLink = Array.from(document.querySelectorAll('.container__dropdownLink'));
 
-  let clickedLink = false;
+  let mouseOver = false;
 
-  document.onclick = () => {
-    if (!clickedLink) {
+  document.onmouseover = () => {
+    if (!mouseOver) {
       dropdown.forEach(element => {
         element.classList.remove('container__dropdown-show');
       });
     }
-    clickedLink = false;
+    mouseOver = false;
   };
 
   const show = index => {
-    clickedLink = true;
+    mouseOver = true;
     const dontShow = [...dropdown.slice(0, index), ...dropdown.slice(index + 1)];
     dontShow.forEach(element => {
       element.classList.remove('container__dropdown-show');
@@ -24,7 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   link.forEach((element, index) => {
-    element.onclick = () => show(index);
+    element.onmouseover = () => show(index);
+  });
+
+  dropdownLink.forEach(element => {
+    element.onmouseover = () => {
+      mouseOver = true;
+    };
   });
 
 });
