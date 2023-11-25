@@ -11,6 +11,8 @@ body {
 }
 
 .icons {
+    $breakpoint-md: 600px;
+    $breakpoint-lg: 900px;
     $color-white: #fff;
     $icons-box-height: 250px;
     $icons-box-width: 300px;
@@ -29,6 +31,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     &__box {
         display: flex;
         flex-direction: column;
@@ -37,8 +40,21 @@ body {
         color: $color-white;
         height: $icons-box-height;
         width: $icons-box-width;
-        border: 1px solid $icon-color-gray;
-        border-left: none;
+        border-bottom: 1px solid $icon-color-gray;
+        @media (min-width: $breakpoint-md) {
+            border: $icon-box-border;
+            border-left: none;
+            &:nth-child(2) {
+                border-right: none;
+            }
+        }
+        @media (min-width: $breakpoint-lg) {
+            border: $icon-box-border;
+            border-left: none;
+            &:nth-child(2) {
+                border-right: $icon-box-border;
+            }
+        }
         &:last-child {
             border-right: none;
         }
