@@ -8,15 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/regular.min.css" integrity="sha512-rOTVxSYNb4+/vo9pLIcNAv9yQVpC8DNcFDWPoc+gTv9SLu5H8W0Dn7QA4ffLHKA0wysdo6C5iqc+2LEO1miAow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../style/carousel.css">
+    <link rel="stylesheet" href="./carousel.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="carousel">
-        <i class="fa-solid fa-chevron-right carousel__arrow"></i>
-        <i class="fa-solid fa-chevron-left carousel__arrow"></i>
-        <div class="carousel__box">
-            <img class="carousel__image" src="../avatar-1.jpg" alt="avatar">
+    <div class="wrapper">
+        <i id="left" class="fa-solid fa-chevron-left carousel__arrow carousel__arrow--right"></i>
+        
+        <ul class="carousel">
+        <li class="carousel__box">
+            <img class="carousel__image" src="./avatar-1.jpg" alt="avatar">
             <p class="carousel__text">
                 “The generated lorem Ipsum is therefore always free from repetition, injected humour, or words etc generate lorem Ipsum which looks racteristic reasonable.”
             </p>
@@ -32,9 +33,9 @@
             <p class="carousel__text">
                 Software Engineer
             </p>
-        </div>
-        <div class="carousel__box">
-            <img class="carousel__image" src="../avatar-1.jpg" alt="avatar">
+        </li>
+        <li class="carousel__box">
+            <img class="carousel__image" src="./avatar-1.jpg" alt="avatar">
             <p class="carousel__text">
                 “The generated lorem Ipsum is therefore always free from repetition, injected humour, or words etc generate lorem Ipsum which looks racteristic reasonable.”
             </p>
@@ -50,9 +51,9 @@
             <p class="carousel__text">
                 Software Engineer
             </p>
-        </div>
-        <div class="carousel__box">
-            <img class="carousel__image" src="../avatar-1.jpg" alt="avatar">
+        </li>
+        <li class="carousel__box">
+            <img class="carousel__image" src="./avatar-1.jpg" alt="avatar">
             <p class="carousel__text">
                 “The generated lorem Ipsum is therefore always free from repetition, injected humour, or words etc generate lorem Ipsum which looks racteristic reasonable.”
             </p>
@@ -68,9 +69,9 @@
             <p class="carousel__text">
                 Software Engineer
             </p>
-        </div>
-        <div class="carousel__box">
-            <img class="carousel__image" src="../avatar-1.jpg" alt="avatar">
+        </li>
+        <li class="carousel__box">
+            <img class="carousel__image" src="./avatar-1.jpg" alt="avatar">
             <p class="carousel__text">
                 “The generated lorem Ipsum is therefore always free from repetition, injected humour, or words etc generate lorem Ipsum which looks racteristic reasonable.”
             </p>
@@ -86,9 +87,9 @@
             <p class="carousel__text">
                 Software Engineer
             </p>
-        </div>
-        <div class="carousel__box">
-            <img class="carousel__image" src="../avatar-1.jpg" alt="avatar">
+        </li>
+        <li class="carousel__box">
+            <img class="carousel__image" src="./avatar-1.jpg" alt="avatar">
             <p class="carousel__text">
                 “The generated lorem Ipsum is therefore always free from repetition, injected humour, or words etc generate lorem Ipsum which looks racteristic reasonable.”
             </p>
@@ -104,9 +105,9 @@
             <p class="carousel__text">
                 Software Engineer
             </p>
-        </div>
-        <div class="carousel__box">
-            <img class="carousel__image" src="../avatar-1.jpg" alt="avatar">
+        </li>
+        <li class="carousel__box">
+            <img class="carousel__image" src="./avatar-1.jpg" alt="avatar">
             <p class="carousel__text">
                 “The generated lorem Ipsum is therefore always free from repetition, injected humour, or words etc generate lorem Ipsum which looks racteristic reasonable.”
             </p>
@@ -122,7 +123,10 @@
             <p class="carousel__text">
                 Software Engineer
             </p>
-        </div>
+        </li>
+    </ul>
+    <i id="right" class="fa-solid fa-chevron-right carousel__arrow"></i>
     </div>
+    <script src="./carousel.js"></script>
 </body>
 </html>
