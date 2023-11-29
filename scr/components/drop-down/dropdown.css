@@ -21,28 +21,28 @@ a {
   cursor: pointer;
 }
 
-.container {
+.navBar {
   display: flex;
   height: -moz-fit-content;
   height: fit-content;
   justify-content: center;
   align-items: center;
 }
-.container__list {
+.navBar__list {
   height: -moz-fit-content;
   height: fit-content;
   width: calc(var(--heading-width) * 3);
   display: flex;
   list-style: none;
 }
-.container__icon {
+.navBar__icon {
   margin-left: 0.5rem;
 }
-.container__link {
+.navBar__listElementButton {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.container__link:hover {
+.navBar__listElementButton:hover {
   color: var(--hover-font-color);
 }
 
@@ -67,15 +67,15 @@ a {
   padding-right: 0.5rem;
 }
 
-.link {
+.dropdownContainer__button {
   width: var(--heading-width);
   display: flex;
   justify-content: center;
 }
-.link:hover {
+.dropdownContainer__button:hover {
   color: var(--hover-font-color);
 }
-.link__dropdown {
+.dropdownContainer__dropdown {
   list-style: none;
   display: flex;
   position: absolute;
@@ -93,21 +93,21 @@ a {
   transition: all 0.3s ease-in-out;
   box-shadow: var(--dropdown-box-shadow);
 }
-.link__dropdown-show {
+.dropdownContainer__dropdown-show {
   visibility: visible;
   z-index: 100;
   opacity: 1;
   transform: translateY(0);
   height: 14rem;
 }
-.link__categoryLink {
+.dropdownContainer__elementLink {
   height: 1rem;
   display: flex;
   align-items: center;
   width: 100%;
   padding: 1rem 1.2rem;
 }
-.link__categoryLink:hover {
+.dropdownContainer__elementLink:hover {
   background-color: var(--hover-background-color);
   color: var(--hover-font-color);
 }/*# sourceMappingURL=dropdown.css.map */

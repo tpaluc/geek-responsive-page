@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const link = Array.from(document.querySelectorAll('.link'));
-    const dropdown = Array.from(document.querySelectorAll('.link__dropdown'));
-    const dropdownLink = Array.from(document.querySelectorAll('.link__dropdownLink'));
+    const link = Array.from(document.querySelectorAll('.dropdownContainer__button'));
+    const dropdown = Array.from(document.querySelectorAll('.dropdownContainer__dropdown'));
+    const dropdownLink = Array.from(document.querySelectorAll('.dropdownContainer__listElement'));
   
-    const class1 = 'link__dropdown-show';
+    const class1 = 'dropdownContainer__dropdown-show';
   
     let mouseOver = false;
   
@@ -52,6 +52,5 @@ document.addEventListener('DOMContentLoaded', () => {
     addListener(link, dropdown, class1);
   
     mouseIsHovering(dropdownLink);
-  
   });
   
