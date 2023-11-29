@@ -69,14 +69,18 @@ a {
 }
 
 .container {
-  visibility: hidden;
   margin-left: auto;
   margin-right: auto;
+  display: none;
+  transition: opacity 0.45s linear;
+}
+.container-hidden {
+  visibility: hidden;
+  display: grid;
   height: 0;
   width: 0;
-  overflow: hidden;
   opacity: 0;
-  transition: opacity 0.45s linear;
+  overflow: hidden;
 }
 .container-active {
   padding: 1rem 0;

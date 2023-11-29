@@ -10,10 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         element.classList.add('navBar__listElementLink-clicked');
         grids.forEach(elem => {
-          elem.classList.remove('container-active');
+          elem.classList.remove('container-active', 'container-hidden');
         });
-        grids[index].classList.toggle('container-active');
+        grids[index].classList.add('container-hidden');
+        setTimeout(()=>{
+          grids[index].classList.remove('container-hidden')
+          grids[index].classList.add('container-active');
+        }, 100);
       };
     });
   });
+
   
