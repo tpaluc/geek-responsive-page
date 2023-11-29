@@ -77,21 +77,24 @@ a {
 }
 .dropdownContainer__dropdown {
   list-style: none;
-  display: flex;
+  display: none;
   position: absolute;
-  flex-direction: column;
-  overflow: hidden;
-  width: -moz-fit-content;
-  width: fit-content;
   background-color: var(--background-color-01);
   border-radius: 0.3rem;
-  opacity: 0;
-  visibility: hidden;
-  z-index: -100;
   transform-origin: bottom;
   transform: translateY(20px);
   transition: all 0.3s ease-in-out;
   box-shadow: var(--dropdown-box-shadow);
+}
+.dropdownContainer__dropdown-hide {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -100;
 }
 .dropdownContainer__dropdown-show {
   visibility: visible;
