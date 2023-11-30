@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #0B1324;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.icons {
+    $breakpoint-md: 600px;
+    $breakpoint-lg: 900px;
+    $color-white: #fff;
+    $icons-box-height: 250px;
+    $icons-box-width: 300px;
+    $icon-fz: 38px;
+    $icon-color-blue: #0EA5E9;
+    $icon-color-yellow: #F59E0B;
+    $icon-color-violet: #754FFE;
+    $icon-color-green: #38A169;
+    $icon-color-gray: #64748B;
+    $icon-box-border: 1px solid $icon-color-gray;
+    $icon-padding-bottom: 30px;
+    $icon-tittle-fz: 24px;
+    $icon-tittle-fw: 600;
+    $icon-text-fz: 14px;
+    $icon-tittle-margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $color-white;
+        height: $icons-box-height;
+        width: $icons-box-width;
+        border-bottom: 1px solid $icon-color-gray;
+        @media (min-width: $breakpoint-md) {
+            border: $icon-box-border;
+            border-left: none;
+            &:nth-child(2) {
+                border-right: none;
+            }
+        }
+        @media (min-width: $breakpoint-lg) {
+            border: $icon-box-border;
+            border-left: none;
+            &:nth-child(2) {
+                border-right: $icon-box-border;
+            }
+        }
+        &:last-child {
+            border-right: none;
+        }
+    }
+    &__icon {
+        font-size: $icon-fz;
+        padding-bottom: $icon-padding-bottom;
+        &--blue {
+            color: $icon-color-blue;
+        }
+        &--yellow {
+            color: $icon-color-yellow;
+        }
+        &--violet {
+            color: $icon-color-violet;
+        }
+        &--green {
+            color: $icon-color-green;
+        }
+    }
+    &__tittle {
+        font-size: $icon-tittle-fz;
+        font-weight: $icon-tittle-fw;
+        margin-bottom: $icon-tittle-margin-bottom;
+    }
+    &__text {
+        font-size: $icon-text-fz;
+        color: $icon-color-gray;
+    }
+}

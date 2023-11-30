@@ -1,0 +1,185 @@
+:root {
+  --card-border: solid 1px #e2e8f080;
+  --active-color: #754ffe;
+  --beginer-badge-background-color: rgba(56,161,105,.1);
+  --beginer-badge-color: #38a169;
+  --intermediate-badge-background-color: rgba(14,165,233,.1);
+  --intermediate-badge-color: #0ea5e9;
+  --advanced-badge-background-color: rgba(255, 0, 0, 0.418);
+  --advanced-badge-color: rgb(160, 0, 0);
+  --star-color: rgb(255, 215, 0);
+  --card-box-shadow: 0 0.625rem 1.875rem rgba(17,24,39,.09);
+  --font-weight-title: 600;
+  --font-size-bolder: 0.75rem;
+  --font-size-ratings: 0.625rem;
+  --font-weight-light: 400;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  font-family: "inter", sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+.navBar {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  height: 3.125rem;
+  background-color: #e2e8f0;
+  border-radius: 0.313rem;
+}
+.navBar__list {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  list-style: none;
+}
+.navBar__listElement {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+}
+.navBar__listElementLink {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+  height: 100%;
+}
+.navBar__listElementLink:hover {
+  color: var(--active-color);
+  border-bottom: 1px solid var(--active-color);
+}
+.navBar__listElementLink-clicked {
+  color: var(--active-color);
+  border-bottom: 1px solid var(--active-color);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  transition: opacity 0.45s linear;
+}
+.container-hidden {
+  visibility: hidden;
+  display: grid;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.container-active {
+  padding: 1rem 0;
+  visibility: visible;
+  display: grid;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: var(--max-width);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, fit-content);
+  gap: 1.25rem;
+  opacity: 1;
+}
+.container__card {
+  width: 100%;
+  height: 100%;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: var(--card-border);
+}
+.container__card:hover {
+  box-shadow: var(--card-box-shadow);
+  transition: box-shadow 0.25s ease;
+}
+.container__cardImage {
+  width: 100%;
+  overflow: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 1rem;
+}
+.container__pic {
+  max-width: 100%;
+}
+.container__cardBody {
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  border-bottom: var(--card-border);
+}
+.container__cardBadge {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.45rem;
+  border-radius: 0.25rem;
+  font-size: 0.625rem;
+}
+.container__cardBadge-beginer {
+  background-color: var(--beginer-badge-background-color);
+  color: var(--beginer-badge-color);
+}
+.container__cardBadge-intermediate {
+  background-color: var(--intermediate-badge-background-color);
+  color: var(--intermediate-badge-color);
+}
+.container__cardBadge-advanced {
+  color: var(--advanced-badge-color);
+  background-color: var(--advanced-badge-background-color);
+}
+.container__cardTitle {
+  margin-bottom: 1rem;
+  font-weight: var(--font-weight-title);
+}
+.container__cardAuthor {
+  font-size: var(--font-size-bolder);
+  margin-bottom: 1rem;
+}
+.container__cardRating {
+  width: 100%;
+}
+.container__cardStar {
+  color: var(--star-color);
+}
+.container__ratingsReceived {
+  font-size: var(--font-size-ratings);
+}
+.container__cardFooter {
+  width: 100%;
+  height: 3.75rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container__cardPrice {
+  font-weight: var(--font-size-bolder);
+}
+.container__cardTrolley {
+  margin-right: 0.5rem;
+}
+.container__cardPurchase {
+  font-weight: var(--font-weight-light);
+}/*# sourceMappingURL=cards.css.map */
