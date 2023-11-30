@@ -1,42 +1,48 @@
-const dropdown = Array.from(document.querySelectorAll('.dropdownContainer__dropdown'));
+const toArray = nodeList => Array.from(nodeList);
 
-const class1 = 'dropdownContainer__dropdown-show';
-const class2 = 'dropdownContainer__dropdown-hide';
+const addListener = (container, index, array, cssClass1, cssClass2, animationDelay) => {
+  return container.addEventListener('pointerover', () => {
+    hideElements(array, cssClass1, cssClass2);
+    selectHovered(index, array, cssClass1, cssClass2, animationDelay);
+  });
+};
+
+const hideElements = (array, cssClass1, cssClass2) => {
+  return array.forEach(element => {
+    element.classList.remove(cssClass1, cssClass2);
+  });
+};
+
+const displayElement = (element, cssClass1, animationDelay) => {
+  return setTimeout(() => {
+    element.classList.add(cssClass1);
+  }, animationDelay);
+};
+
+const selectHovered = (index, array, cssClass1, cssClass2, animationDelay) => {
+  array[index].classList.add(cssClass2);
+  return displayElement(array[index], cssClass1, animationDelay);
+};
+
+const hovering = (element, array, cssClass1, cssClass2) => {
+  return element.addEventListener('pointerout', () => {
+    hideElements(array, cssClass1, cssClass2);
+  });
+};
 
 const run = () => {
+  const dropdown = toArray(document.querySelectorAll('.dropdownContainer__dropdown'));
 
-  document.querySelectorAll('.dropdownContainer').forEach((container, index) => {
+  const class1 = 'dropdownContainer__dropdown-show';
+  const class2 = 'dropdownContainer__dropdown-hide';
 
-    // add listener to each button
-    const addListener = (array, cssClass1, cssClass2) => {
-      container.addEventListener('pointerover', () => active(index, array, cssClass1, cssClass2));
-    };
+  const ANIMATION_DELAY = 5;
 
-    // display list assigned to the link that mouse is hovering over
-    const active = (index, array, cssClass1, cssClass2) => {
-      const dontShow = [...array.slice(0, index), ...array.slice(index + 1)];
-      dontShow.forEach(element => {
-        element.classList.remove(cssClass1, cssClass2);
-      });
-      array[index].classList.add(cssClass2);
-      setTimeout(() => {
-        array[index].classList.add(cssClass1);
-      }, 10);
-    };
-
-    // check if mouse is still hovering over the container, if not: hide it
-    const hovering = (element, array, cssClass1, cssClass2) => {
-      element.addEventListener('pointerout', () => {
-        array.forEach(element => {
-          element.classList.remove(cssClass1, cssClass2);
-        });
-      });
-    };
-
-    addListener(dropdown, class1, class2);
-
-    hovering(container, dropdown, class1, class2);
-  });
+  toArray(document.querySelectorAll('.dropdownContainer'))
+    .forEach((container, index) => {
+      addListener(container, index, dropdown, class1, class2, ANIMATION_DELAY);
+      hovering(container, dropdown, class1, class2);
+    });
 };
 
 export default run;
