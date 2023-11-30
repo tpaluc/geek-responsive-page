@@ -1,10 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .btn {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 22.5px;
   font-weight: 600;
@@ -13,36 +14,37 @@
   color: #fff;
   background-color: #754FFE;
   border: 1px solid #754FFE;
-  border-radius: 5px; }
-  .btn--empty {
-    color: #754FFE;
-    background-color: #1E293B; }
-  .btn--empty:hover {
-    color: #fff;
-    background-color: #754FFE; }
-
+  border-radius: 5px;
+}
+.btn--empty {
+  color: #754FFE;
+  background-color: #1E293B;
+}
+.btn--empty:hover {
+  color: #fff;
+  background-color: #754FFE;
+}
 .btn--dark {
   background-color: #312B4D;
   border: #312B4D;
-  color: #754FFE; }
-
+  color: #754FFE;
+}
 .btn-icon {
-  font-size: 10px; }
-
+  font-size: 10px;
+}
 .btn--round {
   border-radius: 50%;
   padding: 0;
   width: 38px;
   height: 38px;
   background-color: #1E293B;
-  border: #1E293B; }
-
+  border: #1E293B;
+}
 .btn--play {
   border-radius: 50%;
   padding: 0;
   width: 38px;
   height: 38px;
   background-color: #29baf9;
-  border: 2px solid #fff; }
-
-/*# sourceMappingURL=buttons.css.map */
+  border: 2px solid #fff;
+}/*# sourceMappingURL=buttons.css.map */
