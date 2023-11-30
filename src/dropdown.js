@@ -1,10 +1,17 @@
 const toArray = nodeList => Array.from(nodeList);
 
 const addListener = (container, index, array, cssClass1, cssClass2, animationDelay) => {
-  return container.addEventListener('pointerover', () => {
+  const handlePointerOver = () => {
     hideElements(array, cssClass1, cssClass2);
-    selectHovered(index, array, cssClass1, cssClass2, animationDelay);
-  });
+    return selectHovered(index, array, cssClass1, cssClass2, animationDelay);
+  };
+
+  const handlePointerOut = () => {
+    return hideElements(array, cssClass1, cssClass2);
+  };
+
+  container.addEventListener('pointerover', handlePointerOver);
+  container.addEventListener('pointerout', handlePointerOut);
 };
 
 const hideElements = (array, cssClass1, cssClass2) => {
@@ -24,12 +31,6 @@ const selectHovered = (index, array, cssClass1, cssClass2, animationDelay) => {
   return displayElement(array[index], cssClass1, animationDelay);
 };
 
-const hovering = (element, array, cssClass1, cssClass2) => {
-  return element.addEventListener('pointerout', () => {
-    hideElements(array, cssClass1, cssClass2);
-  });
-};
-
 const run = () => {
   const dropdown = toArray(document.querySelectorAll('.dropdownContainer__dropdown'));
 
@@ -41,7 +42,6 @@ const run = () => {
   toArray(document.querySelectorAll('.dropdownContainer'))
     .forEach((container, index) => {
       addListener(container, index, dropdown, class1, class2, ANIMATION_DELAY);
-      hovering(container, dropdown, class1, class2);
     });
 };
 
