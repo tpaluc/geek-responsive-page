@@ -1,35 +1,8 @@
-:root {
-    --card-border: solid 1px #e2e8f080;
-    --active-color: #754ffe;
-    --beginer-badge-background-color: rgba(56,161,105,.1);
-    --beginer-badge-color: #38a169;
-    --intermediate-badge-background-color: rgba(14,165,233,.1);
-    --intermediate-badge-color: #0ea5e9;
-    --advanced-badge-background-color: rgba(255, 0, 0, 0.418);
-    --advanced-badge-color: rgb(160, 0, 0);
-    --star-color: rgb(255, 215, 0);
-    --card-box-shadow: 0 0.625rem 1.875rem rgba(17,24,39,.09);
-    --font-weight-title: 600;
-    --font-size-bolder: 0.75rem;
-    --font-size-ratings: 0.625rem;
-    --font-weight-light: 400;
-    --max-width: 1200px;
-}
-
-* {
-    box-sizing: border-box;
-    font-size: 1rem;
-    padding: 0;
-    margin: 0;
-    font-family: 'inter', sans-serif;
-   }
-   
-a {
-    cursor: pointer;
-}
+$maxWidth : 1200px;
+$fontSizeRatings: 0.625rem;
 
 .cardsNavBar {
-    max-width: var(--max-width);
+    max-width: $maxWidth;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
@@ -93,7 +66,7 @@ a {
         display: grid;
         height: fit-content;
         width: fit-content;
-        max-width: var(--max-width);
+        max-width: $maxWidth;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, fit-content);
         gap: 1.25rem;
@@ -179,7 +152,7 @@ a {
     }
 
     &__ratingsReceived {
-        font-size: var(--font-size-ratings);
+        font-size: $fontSizeRatings;
     }
 
     &__cardFooter {
