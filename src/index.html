@@ -12,16 +12,53 @@
 <body>
     <nav>
         <div class="navBar">
-            <ul class="navBar__list">
+            <div class="navBar__buttons">
+                <div class="button">
+                    <img src="./images/logo.svg" alt="">
+                </div>
+                <div class="button dropdownContainer">
+                    <a class="button__link dropdownContainer__button">
+                    <i class=" button__logo fa-solid fa-bars"></i>Category</a>
+                    <ul class="button__dropdown dropdownContainer__dropdown">
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink">Web development</a>
+                        </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink">Design</a>
+                        </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink">Mobile app</a>
+                        </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink">It software</a>
+                        </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink">Marketing</a>
+                        </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink">Music</a>
+                        </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink">Life Style</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="navBar__list"> 
                 <li class="navBar__listElement dropdownContainer">
                     <a class="navBar__listElementButton dropdownContainer__button">Landings<i class="navBar__icon fa-solid fa-chevron-down"></i>
                     </a>
                     <ul class="dropdownContainer__dropdown">
                         <li class="dropdownContainer__listElement">
+                            <div class="dropdownContainer__elementDiv">
+                                <h3 class="dropdownContainer__elementH3">LANDINGS</h3>
+                            </div>
+                        </li>
+                        <li class="dropdownContainer__listElement">
                             <a class="dropdownContainer__elementLink">Education</a>
                         </li>
                         <li class="dropdownContainer__listElement">
-                            <a class="dropdownContainer__elementLink">Home academy</a>
+                            <a class="dropdownContainer__elementLink">Home Academy</a>
                         </li>
                         <li class="dropdownContainer__listElement">
                             <a class="dropdownContainer__elementLink">Courses</a>
@@ -34,36 +71,177 @@
                         </li>
                         <li class="dropdownContainer__listElement">
                             <a class="dropdownContainer__elementLink">SasS</a>
-                        </li>
+                        </li> 
                         <li class="dropdownContainer__listElement">
                             <a class="dropdownContainer__elementLink">Job Listing</a>
-                        </li>
+                        </li> 
                     </ul>
                 </li>
                 <li class="navBar__listElement dropdownContainer">
                     <a class="navBar__listElementButton dropdownContainer__button">Pages<i class="navBar__icon fa-solid fa-chevron-down"></i>
                     </a>
                     <ul class="dropdownContainer__dropdown">
-                        <li class="dropdownContainer__listElement">
-                            <a class="dropdownContainer__elementLink">Courses</a>
+                        <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                            <a class="dropdownContainer__elementLink dropdownContainer__button">Courses<i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Course Single</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Course Single v2</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Course Resume</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Course Category</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Course Checkout</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Course List/Grid</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Add New Course</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                            <a class="dropdownContainer__elementLink dropdownContainer__button">Paths<i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Browse Path</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Path Single</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                            <a class="dropdownContainer__elementLink dropdownContainer__button">Blog<i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Listing</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Article</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Category</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Sidebar</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                            <a class="dropdownContainer__elementLink dropdownContainer__button">Career<i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Overview</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Listing</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Opening</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                            <a class="dropdownContainer__elementLink dropdownContainer__button">Portfolio<i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">List</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Single</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                            <a class="dropdownContainer__elementLink dropdownContainer__button">Job<i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Home</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">List</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Grid</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Single</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Company List</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Company Single</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                            <a class="dropdownContainer__elementLink dropdownContainer__button">Speciality<i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Coming Soon</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Error 404</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Maintenance Mode</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Terms & Conditions</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="dropdownContainer__listElement">
-                            <a class="dropdownContainer__elementLink">Paths</a>
+                            <hr class="dropdownContainer__elementHr">
                         </li>
                         <li class="dropdownContainer__listElement">
-                            <a class="dropdownContainer__elementLink">Blogs</a>
+                            <a class="dropdownContainer__elementLink">About</a>
+                        </li>
+                        <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                            <a class="dropdownContainer__elementLink dropdownContainer__button">Help Center<i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Help Center</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">FAQ's</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Guide</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Guide Single</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Support</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="dropdownContainer__listElement">
-                            <a class="dropdownContainer__elementLink">Carrer</a>
+                            <a class="dropdownContainer__elementLink">Pricing</a>
                         </li>
                         <li class="dropdownContainer__listElement">
-                            <a class="dropdownContainer__elementLink">Portfolio</a>
+                            <a class="dropdownContainer__elementLink">Compare Plan</a>
                         </li>
                         <li class="dropdownContainer__listElement">
-                            <a class="dropdownContainer__elementLink">Job</a>
-                        </li>
-                        <li class="dropdownContainer__listElement">
-                            <a class="dropdownContainer__elementLink">Speciality</a>
+                            <a class="dropdownContainer__elementLink">Contact</a>
                         </li>
                     </ul>
                 </li>
@@ -72,13 +250,150 @@
                     </a>
                     <ul class="dropdownContainer__dropdown">
                         <li class="dropdownContainer__listElement">
-                            <a class="dropdownContainer__elementLink">Sign in</a>
+                            <div class="dropdownContainer__elementDiv">
+                                <h3 class="dropdownContainer__elementH3">ACCOUNTS</h3>
+                            </div>
+                        </li>
+                        <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                            <a class="dropdownContainer__elementLink dropdownContainer__button">Instructor<i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                <li class="dropdownContainer__listElement">
+                                    <div class="dropdownContainer__elementDiv">
+                                        <h3 class="dropdownContainer__elementH3">INSTRUCTOR</h3>
+                                        <p class="dropdownContainer__elementP">Instructor dashboard for manage courses and earning.</p>
+                                    </div>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <hr class="dropdownContainer__elementHr">
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Dashboard</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Profile</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">My Courses</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Orders</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Reviews</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Students</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Payouts</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Earning</a>
+                                </li>
+                                <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                                    <a class="dropdownContainer__elementLink dropdownContainer__button">Quiz [NEW]<i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                    <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                        <li class="dropdownContainer__listElement">
+                                            <a class="dropdownContainer__elementLink">Quiz</a>
+                                        </li>
+                                        <li class="dropdownContainer__listElement">
+                                            <a class="dropdownContainer__elementLink">Single</a>
+                                        </li>
+                                        <li class="dropdownContainer__listElement">
+                                            <a class="dropdownContainer__elementLink">Result</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                            <a class="dropdownContainer__elementLink dropdownContainer__button">Students<i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                <li class="dropdownContainer__listElement">
+                                    <div class="dropdownContainer__elementDiv">
+                                        <h3 class="dropdownContainer__elementH3">STUDENTS</h3>
+                                        <p class="dropdownContainer__elementP">Students dashboard to manage your courses and subscriptions.</p>
+                                    </div>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <hr class="dropdownContainer__elementHr">
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Dashboard</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Subscriptions</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Payments</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Billing Info</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Invoice</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Invoice Details</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">Bookmarked</a>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">My Path</a>
+                                </li>
+                                <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                                    <a class="dropdownContainer__elementLink dropdownContainer__button">Quiz [NEW]<i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                    <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                        <li class="dropdownContainer__listElement">
+                                            <a class="dropdownContainer__elementLink">Quiz</a>
+                                        </li>
+                                        <li class="dropdownContainer__listElement">
+                                            <a class="dropdownContainer__elementLink">Attempt</a>
+                                        </li>
+                                        <li class="dropdownContainer__listElement">
+                                            <a class="dropdownContainer__elementLink">Start</a>
+                                        </li>
+                                        <li class="dropdownContainer__listElement">
+                                            <a class="dropdownContainer__elementLink">Result</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdownContainer__listElement dropdownContainer dropdownContainer__2ndLevelContainer">
+                            <a class="dropdownContainer__elementLink dropdownContainer__button">Admin<i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="dropdownContainer__dropdown dropdownContainer__2ndLevelDropdown">
+                                <li class="dropdownContainer__listElement">
+                                    <div class="dropdownContainer__elementDiv">
+                                        <h3 class="dropdownContainer__elementH3">MASTER ADMIN</h3>
+                                        <p class="dropdownContainer__elementP">Master admin dashboard to manage courses, user, site setting , and work with amazing apps.</p>
+                                    </div>
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <hr class="dropdownContainer__elementHr">
+                                </li>
+                                <li class="dropdownContainer__listElement">
+                                    <a class="dropdownContainer__elementLink">This will be a button</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="dropdownContainer__listElement">
-                            <a class="dropdownContainer__elementLink">Sign up</a>
+                            <hr class="dropdownContainer__elementHr">
                         </li>
                         <li class="dropdownContainer__listElement">
-                            <a class="dropdownContainer__elementLink">Forgot password</a>
+                            <a class="dropdownContainer__elementLink">Sign In</a>
+                        </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink">Sign Up</a>
+                        </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink">Forgot Password</a>
                         </li>
                         <li class="dropdownContainer__listElement">
                             <a class="dropdownContainer__elementLink">Edit profile</a>
@@ -92,9 +407,40 @@
                         <li class="dropdownContainer__listElement">
                             <a class="dropdownContainer__elementLink">Notifications</a>
                         </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink">Privacy Settings</a>
+                        </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink">Delete Profile</a>
+                        </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink">Linked Accounts</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
+            <div class="navBar__buttons">
+                <div class="button dropdownContainer button__round">
+                    <a class="button__link dropdownContainer__button">
+                        <i class="fa-regular fa-sun"></i></a>
+                    <ul class="button__dropdown button__dropdownRound dropdownContainer__dropdown">
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink dropdownContainer__elementLinkRoundBtn"><i class="fa-regular fa-sun button__icon"></i> Light</a>
+                        </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink dropdownContainer__elementLinkRoundBtn"><i class="fa-solid fa-moon button__icon"></i>Dark</a>
+                        </li>
+                        <li class="dropdownContainer__listElement">
+                            <a class="dropdownContainer__elementLink dropdownContainer__elementLinkRoundBtn"><i class="fa-solid fa-circle-half-stroke button__icon"></i>Auto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="button button__round">
+                    <a class="button__link"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <button class="btn btn__signIn">Sign In</button>
+                <button class="btn btn__signUp">Sign Up</button>
+            </div>
         </div>
     </nav>
     <main>

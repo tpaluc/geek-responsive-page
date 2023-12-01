@@ -1,9 +1,17 @@
 const toArray = nodeList => Array.from(nodeList);
 
 const addListener = (container, index, array, cssClass1, cssClass2, animationDelay) => {
-  const handlePointerOver = () => {
-    hideElements(array, cssClass1, cssClass2);
-    return selectHovered(index, array, cssClass1, cssClass2, animationDelay);
+  const handlePointerOver = event => {
+    const relatedTarget = event.relatedTarget;
+    selectHovered(index, array, cssClass1, cssClass2, animationDelay, container);
+
+    // Check if relatedTarget is a child of the container
+    if (relatedTarget || container.contains(relatedTarget)) {
+      return;
+
+    } else if (!(container.contains(relatedTarget))) {
+      hideElements(array, cssClass1, cssClass2);
+    }
   };
 
   const handlePointerOut = () => {
@@ -20,15 +28,15 @@ const hideElements = (array, cssClass1, cssClass2) => {
   });
 };
 
-const displayElement = (element, cssClass1, animationDelay) => {
-  return setTimeout(() => {
+const displayElement = (element, cssClass1, cssClass2, animationDelay) => {
+  element.classList.add(cssClass2);
+  setTimeout(() => {
     element.classList.add(cssClass1);
   }, animationDelay);
 };
 
 const selectHovered = (index, array, cssClass1, cssClass2, animationDelay) => {
-  array[index].classList.add(cssClass2);
-  return displayElement(array[index], cssClass1, animationDelay);
+  displayElement(array[index], cssClass1, cssClass2, animationDelay);
 };
 
 const run = () => {

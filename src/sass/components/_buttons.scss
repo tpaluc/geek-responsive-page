@@ -1,0 +1,62 @@
+.button {
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+    padding-left: 1rem;
+       color: var(--hover-font-color);
+
+    &__round {
+      border-radius: 50%;
+      margin-left: 1rem;
+      padding: 0;
+      height: 40px;
+      width: 40px;
+    }
+
+    &__link {
+      background-color: var(--button-background-color01);
+       color: inherit;
+       padding: 0.7rem 1rem;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 100%;
+       height: 100%;
+       border-radius: 0.5rem;
+    }
+ 
+    &__logo {
+       padding-right: 0.5rem;
+    }
+
+    &__icon {
+        margin-right: 0.3rem;
+    }
+ }
+
+ .btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+
+  &__signIn {
+      color:#fff ;
+      background-color: #754FFE;
+  }
+  &__signIn:hover {
+      color: #fff;
+      background-color: #6645dd;
+  }
+
+  &__signUp {
+    background-color: #fff;
+    border: 1px solid black;
+  }
+
+  &__signUp:hover {
+    background-color: rgb(231, 231, 231);
+  }
+}
