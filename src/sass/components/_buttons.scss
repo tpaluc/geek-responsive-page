@@ -59,4 +59,22 @@
   &__signUp:hover {
     background-color: rgb(231, 231, 231);
   }
+  &__container {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+  &__play {
+    text-align: center;
+    height: 36px;
+    padding: 0 16px;
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+  }
+  &__playImg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
 }
